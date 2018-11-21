@@ -1,0 +1,25 @@
+{
+  "name": "nodejs_homework",
+  "version": "1.0.0",
+  "description": "Репозиторий общий для всех ДЗ. Каждое ДЗ в своей ветке.",
+  "main": "index.js",
+  "dependencies": {
+    "del": "^3.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "yargs": "^12.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaYmon161/NodeJS_Homework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaYmon161/NodeJS_Homework/issues"
+  },
+  "homepage": "https://github.com/SaYmon161/NodeJS_Homework#readme"
+}
