@@ -16,7 +16,7 @@ const argv = yargs
   .option('from', {
     alias: 'f',
     describe: 'Source directory path',
-    default: './from'
+    demandOption: true,
   })
   .option('to', {
     alias: 't',
