@@ -5,10 +5,15 @@ const argv = yargs
   .help('help')
   .alias('help', 'h')
   .example('$0 --time 20')
-  .option('time', {
-    alias: 't',
+  .option('interval', {
+    alias: 'i',
     describe: 'Timer interval in seconds',
-    default: 20
+    default: 1
+  })
+  .option('timer', {
+    alias: 't',
+    describe: 'Stop delay in seconds',
+    default: 10
   })
   .argv
 
@@ -20,11 +25,29 @@ const getTime = function() {
   return `${hours}:${minutes}:${seconds}`
 }
 
-const timer = setInterval(() => {
-  console.log(getTime());
-}, 1000)
 
-setTimeout(() => {
-  clearInterval(timer);
-  console.log(`stop time: ${getTime()}`);
-}, argv.time * 1000 + 1000)
+
+let http = require('http');
+http.createServer(function(req, res) {
+  if (req.url !== '/favicon.ico') {
+    res.writeHead(404, {
+      'Content-type': 'text/plain; charset=utf-8'
+    });
+    
+    const timer = setInterval(() => {
+      console.log(getTime());
+    }, argv.interval * 1000)
+
+    setTimeout(() => {
+      clearInterval(timer);
+      console.log(`stop time: ${getTime()}`);
+    }, argv.timer * 1000 + 1000)
+  } else {
+    res.end();
+  }
+
+}).listen(8080);
+
+
+
+
