@@ -33,6 +33,7 @@ http.createServer(function(req, res) {
     res.writeHead(404, {
       'Content-type': 'text/plain; charset=utf-8'
     });
+    res.writeHead(200, {'Content-Type': 'text/html'});
     
     const timer = setInterval(() => {
       console.log(getTime());
@@ -40,8 +41,8 @@ http.createServer(function(req, res) {
 
     setTimeout(() => {
       clearInterval(timer);
-      console.log(`stop time: ${getTime()}`);
-    }, argv.timer * 1000 + 1000)
+      res.end(`<h1>Stop time: ${getTime()}</h1>`);
+    }, argv.timer * 1000)
   } else {
     res.end();
   }
