@@ -1,0 +1,23 @@
+{
+  "mail": {
+    "name": "wertwr",
+    "email": "saymon.01@mail.ru",
+    "message": "werwerwerwerwer"
+  },
+  "login": {
+    "email": "saymon.161@gmail.com",
+    "password": "qwerty"
+  },
+  "skills": {
+    "age": "1",
+    "concerts": "1",
+    "cities": "1",
+    "years": "1"
+  },
+  "products": {},
+  "product": {
+    "photo": "141243.png",
+    "name": "test",
+    "price": "500"
+  }
+}
