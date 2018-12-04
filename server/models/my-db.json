@@ -1,23 +1,166 @@
 {
   "mail": {
-    "name": "wertwr",
+    "name": "Марат Сайфутдинов",
     "email": "saymon.01@mail.ru",
-    "message": "werwerwerwerwer"
+    "message": "asdasdasdasdasd"
   },
   "login": {
     "email": "saymon.161@gmail.com",
     "password": "qwerty"
   },
-  "skills": {
-    "age": "1",
-    "concerts": "1",
-    "cities": "1",
-    "years": "1"
-  },
-  "products": {},
-  "product": {
-    "photo": "141243.png",
-    "name": "test",
-    "price": "500"
-  }
+  "skills": [
+    {
+      "number": "40",
+      "text": "Возраст начала занятий на скрипке"
+    },
+    {
+      "number": "54",
+      "text": "Концертов отыграл"
+    },
+    {
+      "number": "25",
+      "text": "Максимальное число городов в туре"
+    },
+    {
+      "number": "27",
+      "text": "Лет на сцене в качестве скрипача"
+    }
+  ],
+  "products": [
+    {
+      "src": "./assets/img/products/Work1.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work2.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work3.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work4.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work5.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work6.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work7.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work8.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work9.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "\\upload\\4a12c20f-d53c-4403-8f46-4c6dbb5feb55.jpg",
+      "name": "dsfsf",
+      "price": "sdfsdf"
+    },
+    {
+      "src": "\\upload\\7md.jpg",
+      "name": "test",
+      "price": "500"
+    },
+    {
+      "src": "\\upload\\141243.png",
+      "name": "test",
+      "price": "100"
+    },
+    {
+      "src": "\\upload\\Без названия.jpg",
+      "name": "test",
+      "price": "100"
+    },
+    {
+      "src": "\\upload\\Без названия.jpg",
+      "name": "test",
+      "price": "100"
+    },
+    {
+      "src": "\\upload\\Без названия.jpg",
+      "name": "test",
+      "price": "100"
+    },
+    {
+      "src": "\\upload\\R6S_Screenshot_7_196952.jpg",
+      "name": "test",
+      "price": "100"
+    },
+    {
+      "src": "\\upload\\R6S_Screenshot_7_196952.jpg",
+      "name": "test",
+      "price": "100"
+    },
+    {
+      "src": "\\upload\\vWHNoBw.jpg",
+      "name": "test",
+      "price": "100"
+    },
+    {
+      "src": "\\upload\\vWHNoBw.jpg",
+      "name": "test",
+      "price": "100"
+    },
+    {
+      "src": "\\upload\\676369.jpg",
+      "name": "test",
+      "price": "500"
+    },
+    {
+      "src": "\\upload\\676369.jpg",
+      "name": "test",
+      "price": "500"
+    },
+    {
+      "src": "\\upload\\vWHNoBw.jpg",
+      "name": "test",
+      "price": "500"
+    },
+    {
+      "src": "\\upload\\vWHNoBw.jpg",
+      "name": "test",
+      "price": "500"
+    },
+    {
+      "src": "\\upload\\676369.jpg",
+      "name": "test",
+      "price": "500"
+    },
+    {
+      "src": "\\upload\\676369.jpg",
+      "name": "test",
+      "price": "500"
+    },
+    {
+      "src": "\\upload\\Rainbow_Six_Siege_10.jpg",
+      "name": "test",
+      "price": "500"
+    },
+    {
+      "src": "\\upload\\Rainbow_Six_Siege_10.jpg",
+      "name": "test",
+      "price": "500"
+    }
+  ]
 }
