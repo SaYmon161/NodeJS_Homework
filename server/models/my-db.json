@@ -10,19 +10,19 @@
   },
   "skills": [
     {
-      "number": "40",
+      "number": "22",
       "text": "Возраст начала занятий на скрипке"
     },
     {
-      "number": "54",
+      "number": "7",
       "text": "Концертов отыграл"
     },
     {
-      "number": "25",
+      "number": "4",
       "text": "Максимальное число городов в туре"
     },
     {
-      "number": "27",
+      "number": "6",
       "text": "Лет на сцене в качестве скрипача"
     }
   ],
@@ -73,94 +73,14 @@
       "price": 600
     },
     {
-      "src": "\\upload\\4a12c20f-d53c-4403-8f46-4c6dbb5feb55.jpg",
-      "name": "dsfsf",
-      "price": "sdfsdf"
-    },
-    {
-      "src": "\\upload\\7md.jpg",
+      "src": "./assets/img/products/Work9.jpg",
       "name": "test",
-      "price": "500"
-    },
-    {
-      "src": "\\upload\\141243.png",
-      "name": "test",
-      "price": "100"
-    },
-    {
-      "src": "\\upload\\Без названия.jpg",
-      "name": "test",
-      "price": "100"
-    },
-    {
-      "src": "\\upload\\Без названия.jpg",
-      "name": "test",
-      "price": "100"
-    },
-    {
-      "src": "\\upload\\Без названия.jpg",
-      "name": "test",
-      "price": "100"
-    },
-    {
-      "src": "\\upload\\R6S_Screenshot_7_196952.jpg",
-      "name": "test",
-      "price": "100"
-    },
-    {
-      "src": "\\upload\\R6S_Screenshot_7_196952.jpg",
-      "name": "test",
-      "price": "100"
-    },
-    {
-      "src": "\\upload\\vWHNoBw.jpg",
-      "name": "test",
-      "price": "100"
-    },
-    {
-      "src": "\\upload\\vWHNoBw.jpg",
-      "name": "test",
-      "price": "100"
-    },
-    {
-      "src": "\\upload\\676369.jpg",
-      "name": "test",
-      "price": "500"
-    },
-    {
-      "src": "\\upload\\676369.jpg",
-      "name": "test",
-      "price": "500"
-    },
-    {
-      "src": "\\upload\\vWHNoBw.jpg",
-      "name": "test",
-      "price": "500"
-    },
-    {
-      "src": "\\upload\\vWHNoBw.jpg",
-      "name": "test",
-      "price": "500"
-    },
-    {
-      "src": "\\upload\\676369.jpg",
-      "name": "test",
-      "price": "500"
-    },
-    {
-      "src": "\\upload\\676369.jpg",
-      "name": "test",
-      "price": "500"
-    },
-    {
-      "src": "\\upload\\Rainbow_Six_Siege_10.jpg",
-      "name": "test",
-      "price": "500"
-    },
-    {
-      "src": "\\upload\\Rainbow_Six_Siege_10.jpg",
-      "name": "test",
-      "price": "500"
+      "price": 500
     }
-  ]
+  ],
+  "user": {
+    "login": "admin@admin.ru",
+    "hash": "1abc655148ba5acdc8ece7cac30b1729c17952937e6b47edea1a7c9c1211c4adc11f4256826affdaeda92a295a8b6ce7e99fefc3770c44c53cabfb7ee125dd5be5e97364504d28f276e7c5c5d436ff7e88f0f16419000b752acda1fead919ff2e3a5c0ed33d44e5c77df74fc2ead0ff2002fb1afbcfd63480ae9e7a095db9b760b8fa4332e18da484572fbae03a25f207839e15aec5f2072aa52310660f0ea08366fbe06c0f6584ac763bc512083468575673ca912667ae138f0d93640a50113ccb8ce22a6fcf93fc30d487a2ecd3d09ccddafd0fe9633273329926a4d738d528e2735c5e74ffb585566037dd4d7fe238b7e11624135528dc806a71693552b5d71a30089b78abd23cd7978c572035b2c621cf3b0445168708928970d85da3fe48aa7e9221915b5494e162c8c133076af44b5d1d2993d3ce9c0e338f7b53f5190508ac1d6f51fc88ad35be79d52ea991c8eab276de215ebe54b39150acaf17b4f01e564ece54163d781395db50f0b320bd14200e021da257c2450e5de08f9da409cc25f77b25ce97c204643da86fe53d3b18ddf5508f0ca8be08a18fec468e0f8442e8c140a7bf32a478f41910b7469b1246754cf483b8ae917e10854026cf9481913901322fc9f2dacba0e5596f37fb4b9e9fe3bb081232c16bb1b875590dbf164d2518690ac36c652799d7f4d68b92084475e99785e9b5bfa4ff3cfe4f5ca22",
+    "salt": "829e39ccd7e58099d3ea2ff2acf7cb4a"
+  }
 }

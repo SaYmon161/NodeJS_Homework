@@ -1,85 +1,67 @@
-const formidable = require('formidable');
+const db = require('../models/db');
 const fs = require('fs');
-const path = require('path');
-const db = require('../models/db')();
+const util = require('util');
+const _path = require('path');
+const validation = require('../libs/validation');
+const rename = util.promisify(fs.rename);
+const unlink = util.promisify(fs.unlink);
 
-
-module.exports.getAdmin = function (req, res) {
-  res.render('pages/admin', {msgskill: req.flash('msgskill'), msgfile: req.flash('msgfile')});
+module.exports.getAdmin = async ctx => {
+  if (ctx.session.isAdmin) {
+    ctx.render('pages/admin', {
+      msgskill: ctx.flash('skills')[0],
+      msgfile: ctx.flash('file')[0]
+    });
+  } else {
+    ctx.flash('auth', 'Нужна авторизация!')
+    ctx.redirect('/login')
+  }
 };
 
-module.exports.sendSkills = function (req, res, next) {
-  let form = new formidable.IncomingForm();
+module.exports.sendSkills = async ctx => {
+  const { age, concerts, cities, years } = ctx.request.body;
 
-  form.parse(req, function(err, fields) {
-    if (err) {
-      return next(err);
-    }
-    let skills = [
+  db.set('skills', [
       {
-        number: fields.age,
+        number: age,
         text: 'Возраст начала занятий на скрипке'
       },
       {
-        number: fields.concerts,
+        number: concerts,
         text: 'Концертов отыграл'
       },
       {
-        number: fields.cities,
+        number: cities,
         text: 'Максимальное число городов в туре'
       },
       {
-        number: fields.years,
+        number: years,
         text: 'Лет на сцене в качестве скрипача'
       }
-    ];
-
-    req.flash('msgskill', 'Данные загружены');
-    db.set('skills', skills);
-    db.save();
-    res.redirect('/admin');
-  });
+    ])
+    .write();
+  ctx.flash('skills', 'Информация обновлена!')
+  ctx.redirect('/admin')
 };
 
-module.exports.sendProduct = (req, res, next) => {
-  let form = new formidable.IncomingForm();
-  let upload = path.join('./public', 'upload');
-
-  if (!fs.existsSync(upload)) {
-    fs.mkdirSync(upload);
+module.exports.sendProduct = async ctx => {
+  const { productName, price } = ctx.request.body;
+  const { name, size, path } = ctx.request.files.photo;
+  const valid = validation(name, price, name, size);
+  if (valid) {
+    await unlink(path);
+    ctx.flash('file', valid.mes)
+    ctx.redirect('/admin')
   }
-
-  form.uploadDir = path.join(process.cwd(), upload);
-
-  form.parse(req, function(err, fields, files) {
-    if (err) {
-      return next(err);
-    }
-
-    const fileName = path.join(upload, files.photo.name);
-
-    fs.rename(files.photo.path, fileName, function(err) {
-      if (err) {
-        console.error(err.message);
-        return;
-      }
-
-      let dir = fileName.substr(fileName.indexOf('\\'));
-
-      let newProduct = {
-        src: dir,
-        name: fields.name,
-        price: fields.price
-      };
-
-      let products = db.get('products');
-
-      products.push(newProduct);
-      
-      req.flash('msgfile', 'Картинка успешно загружена');
-      db.set('products', products);
-      db.save();
-      res.redirect('/admin');
-    });
-  });
+  let fileName = _path.join(process.cwd(), 'public', 'upload', name);
+  await rename(path, fileName);
+  db.get('products')
+  .push({
+    src: _path.join('upload', name),
+    name: productName,
+    price: parseInt(price)
+  })
+  .write();
+  ctx.flash('file', 'Успешно загружено!')
+  ctx.redirect('/admin')
 };

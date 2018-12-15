@@ -1,9 +1,7 @@
-const nconf = require('nconf');
-const path = require('path');
+const low = require('lowdb');
+const FileSync = require('lowdb/adapters/FileSync');
 
-module.exports = function () {
-  return nconf
-    .argv()
-    .env()
-    .file({file: path.join(__dirname, 'my-db.json')});
-};
+const adapter = new FileSync('./models/my-db.json');
+const db = low(adapter);
+
+module.exports = db;
